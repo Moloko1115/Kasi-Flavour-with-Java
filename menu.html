@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search, sort and explore the Kasi Flavour menu with dynamic filtering and authentic South African dishes.">
+    <meta name="keywords" content="Kasi menu, menu search, dynamic menu, South African dishes, pap, chakalaka, street food">
+    <meta name="author" content="Kasi Flavour">
+    <title>Menu - Kasi Flavour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about us.html">About</a>
+            <a href="contact us.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu-section">
+            <h1>Our Menu</h1>
+
+            <div class="selection-bar">
+                <label for="meal-category">Select Meal Category</label>
+                <select id="meal-category" name="meal-category">
+                    <option value="all">All meals</option>
+                    <option value="main">Main Plates</option>
+                    <option value="sides">Sides & Extras</option>
+                    <option value="street">Street Favourites</option>
+                    <option value="granny">Granny's Taste</option>
+                    <option value="drinks">Drinks</option>
+                    <option value="desserts">Desserts</option>
+                    <option value="combo">Combo Deals</option>
+                </select>
+            </div>
+
+            <section class="dynamic-menu-area">
+                <h2>Explore Our Menu</h2>
+                <div class="dynamic-controls">
+                    <label for="menu-search">Search meals
+                        <input type="search" id="menu-search" placeholder="Search meals, categories, or ingredients">
+                    </label>
+                    <label for="menu-sort">Sort by
+                        <select id="menu-sort">
+                            <option value="default">Best match</option>
+                            <option value="price-asc">Price: low to high</option>
+                            <option value="price-desc">Price: high to low</option>
+                            <option value="category">Category</option>
+                        </select>
+                    </label>
+                </div>
+                <div id="dynamic-menu-list" class="dynamic-menu-grid"></div>
+            </section>
+
+            <form id="menu-order-form" class="meal-selection" action="#" method="post">
+                <p class="note-text">Select the meals you want and then submit to proceed to the payment page.</p>
+                <div class="menu-group">
+                    <div class="group-header">
+                        <h3>*Main Plates*</h3>
+                        <img src="Pictures/pap-heal.jpg" alt="Pap Heal">
+                    </div>
+                    <div class="meal-item"><input type="checkbox" id="meal-wors-pap" name="meal" value="Wors + Pap + chakalaka"><label for="meal-wors-pap">Wors + Pap + chakalaka - R70</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-steak-pap" name="meal" value="Steak + Pap + Chakalaka"><label for="meal-steak-pap">Steak + Pap + Chakalaka - R85</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-chicken-pap" name="meal" value="1/3 Chicken + Pap"><label for="meal-chicken-pap">1/3 Chicken + Pap - R65</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-beef-stew" name="meal" value="Beef stew + Pap"><label for="meal-beef-stew">Beef stew + Pap - R70</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-chicken-chips" name="meal" value="Chicken Dust 2pieces + Chips"><label for="meal-chicken-chips">Chicken Dust 2 pieces + Chips - R50</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-chicken-pap2" name="meal" value="Chicken Dust 2pieces + Pap"><label for="meal-chicken-pap2">Chicken Dust 2 pieces + Pap - R45</label></div>
+                </div>
+
+                <div class="menu-group">
+                    <div class="group-header">
+                        <h3>*Sides and Extras*</h3>
+                        <img src="Pictures/chips.jpg" alt="Chips">
+                    </div>
+                    <div class="meal-item"><input type="checkbox" id="meal-chips" name="meal" value="Chips (Regular)"><label for="meal-chips">Chips (Regular) - R20</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-chips-cheese" name="meal" value="Chips + Cheese/Russian"><label for="meal-chips-cheese">Chips + Cheese/Russian - R30</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-pap" name="meal" value="Pap"><label for="meal-pap">Pap - R15</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-chakalaka" name="meal" value="Chakalaka"><label for="meal-chakalaka">Chakalaka - R15</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-coleslaw" name="meal" value="Coleslaw"><label for="meal-coleslaw">Coleslaw - R15</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-vetkoek" name="meal" value="5 Ama gwinya (Vetkoek)"><label for="meal-vetkoek">5 Ama gwinya (Vetkoek) - R10</label></div>
+                </div>
+
+                <div class="menu-group">
+                    <div class="group-header">
+                        <h3>*Street Kasi Favourites*</h3>
+                        <img src="Pictures/kota.jpg" alt="Kota">
+                    </div>
+                    <div class="meal-item"><input type="checkbox" id="meal-chips-russian" name="meal" value="Chips + Russian"><label for="meal-chips-russian">Chips (Regular) + Russian - R40</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-boerewors" name="meal" value="Boerewors Rolls"><label for="meal-boerewors">Boerewors Rolls - R35</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-beef-burger" name="meal" value="Beef Burger Kasi Styles"><label for="meal-beef-burger">Beef Burger Kasi Styles - R45</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-chicken-burger" name="meal" value="Chicken Burger"><label for="meal-chicken-burger">Chicken Burger - R40</label></div>
+                </div>
+
+                <div class="menu-group">
+                    <div class="group-header">
+                        <h3>*Granny's Taste*</h3>
+                        <img src="Pictures/mogodu.jpg" alt="Mogodu">
+                    </div>
+                    <div class="meal-item"><input type="checkbox" id="meal-samp-beans" name="meal" value="Samp & Beans + Beef"><label for="meal-samp-beans">Samp & Beans + Beef - R55</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-mogodu-pap" name="meal" value="Mogodu + Pap"><label for="meal-mogodu-pap">Mogodu + Pap - R65</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-walkie" name="meal" value="Chicken Feet (Walkie Talkies) + Pap"><label for="meal-walkie">Chicken Feet (Walkie Talkies) + Pap - R40</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-cow-heals" name="meal" value="Cow Heals + Pap"><label for="meal-cow-heals">Cow Heals + Pap - R75</label></div>
+                </div>
+
+                <div class="menu-group">
+                    <div class="group-header">
+                        <h3>*Drinks*</h3>
+                        <img src="Pictures/soft-drink.jpg" alt="Drinks">
+                    </div>
+                    <div class="meal-item"><input type="checkbox" id="meal-soft-330" name="meal" value="Soft Drink 330ml"><label for="meal-soft-330">Soft Drink (Coke, Fanta, Sprite 330ml) - R15</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-soft-500" name="meal" value="Soft Drink 500ml"><label for="meal-soft-500">Soft Drink (500ml) - R20</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-mageu" name="meal" value="Mageu"><label for="meal-mageu">Mageu - R15</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-juice" name="meal" value="Juice"><label for="meal-juice">Juice - R15</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-water" name="meal" value="Water"><label for="meal-water">Water - R10</label></div>
+                </div>
+
+                <div class="menu-group">
+                    <div class="group-header">
+                        <h3>*Desserts*</h3>
+                        <img src="Pictures/desserts.jpg" alt="Desserts">
+                    </div>
+                    <div class="meal-item"><input type="checkbox" id="meal-malva" name="meal" value="Malva Pudding"><label for="meal-malva">Malva Pudding - R30</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-koeksisters" name="meal" value="Koeksisters"><label for="meal-koeksisters">Koeksisters - R15</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-ice-cone" name="meal" value="Ice Cream Cone"><label for="meal-ice-cone">Ice Cream Cone - R15</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-ice-cup" name="meal" value="Ice Cream Cup"><label for="meal-ice-cup">Ice Cream Cup - R20</label></div>
+                </div>
+
+                <div class="menu-group">
+                    <div class="group-header">
+                        <h3>*Combo Deals*</h3>
+                        <img src="Pictures/magwinya-mince.png" alt="Magwinya with mince combo">
+                    </div>
+                    <div class="meal-item"><input type="checkbox" id="meal-kota-drink" name="meal" value="Kota + Drink"><label for="meal-kota-drink">Kota + Drink (Any 330ml) - R50</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-russian-chips-drink" name="meal" value="Russian + Chips + Drink"><label for="meal-russian-chips-drink">Russian + Chips + Drink - R65</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-pap-beef-stew" name="meal" value="Pap + Beef + Stew + Drink"><label for="meal-pap-beef-stew">Pap + Beef + Stew + Drink - R70</label></div>
+                    <div class="meal-item"><input type="checkbox" id="meal-vetkoek-mince" name="meal" value="5 Ama gwinya (Vetkoek) + Mince + Coffee/Soft Drink"><label for="meal-vetkoek-mince">5 Ama gwinya (Vetkoek) + Mince + Coffee/Soft Drink - R55</label></div>
+                </div>
+
+                <button type="submit" class="btn">Submit selection</button>
+            </form>
+
+            <div class="delivery-info">
+                <h3>Delivery fees</h3>
+                <p>Within 2km - R20</p>
+                <p>Within 5km - R30</p>
+                <p>Within 10km - R55</p>
+                <p>10km and above up to 20km - R150</p>
+                <p>There are deals to get discounts when ordering.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Kasi Flavour. Here to last. Everyone is welcomed with warm hands.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

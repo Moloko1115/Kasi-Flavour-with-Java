@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review your selected items and complete your payment for Kasi Flavour orders.">
+    <meta name="keywords" content="Kasi Flavour payment, order summary, checkout, mobile payment, EFT">
+    <title>Payment - Kasi Flavour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about us.html">About</a>
+            <a href="contact us.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+        </nav>
+    </header>
+
+    <main class="payment-page">
+        <section id="order-summary" class="payment-summary">
+            <h2>Order Summary</h2>
+            <p>Loading your selected meals...</p>
+        </section>
+
+        <section class="payment-methods">
+            <h2>Choose a Payment Method</h2>
+            <form id="payment-form" action="#" method="post">
+                <div class="form-field">
+                    <label for="payment-method">Payment Method</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="">Select payment method</option>
+                        <option value="Cash on pickup">Cash on pickup</option>
+                        <option value="Mobile transfer">Mobile transfer</option>
+                        <option value="Bank EFT">Bank EFT</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="payment-name">Full Name</label>
+                    <input type="text" id="payment-name" name="payment-name" required>
+                </div>
+                <div class="form-field">
+                    <label for="payment-phone">Phone Number</label>
+                    <input type="tel" id="payment-phone" name="payment-phone" required>
+                </div>
+                <button type="submit" class="btn">Confirm Payment</button>
+                <div id="payment-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+        </section>
+
+        <section class="payment-help">
+            <h2>Payment Help</h2>
+            <p>After confirming payment, you will receive a summary message here. For mobile transfer, use the WhatsApp number in the contact page to send proof.</p>
+            <p>If you need to adjust your order, return to the <a href="menu.html">Menu page</a> and choose different items.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Kasi Flavour. Here to last. Everyone is welcomed with warm hands.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
