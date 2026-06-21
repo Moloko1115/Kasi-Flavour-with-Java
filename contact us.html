@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Kasi Flavour for questions, orders, or catering requests. Find our location with an interactive map and use our contact form.">
+    <meta name="keywords" content="contact Kasi Flavour, restaurant map, contact form, enquiry, catering, customer support">
+    <meta name="author" content="Kasi Flavour">
+    <title>Contact Us - Kasi Flavour</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about us.html">About</a>
+            <a href="contact us.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="https://maps.app.goo.gl/hp3maCLHyeqwVXaA9" target="_blank">View on Map</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+
+        <section class="contact-section">
+            <h2>Contact & Social Platforms</h2>
+            <div class="social-grid">
+                <div class="social-card">
+                    <img src="Pictures/gmail.png" alt="Email">
+                    <p>Email: info@kasiflavour.com</p>
+                </div>
+                <div class="social-card">
+                    <img src="Pictures/phonecall.png" alt="Phone">
+                    <p>Phone: 0821571234</p>
+                </div>
+                <div class="social-card">
+                    <img src="Pictures/whatsapp.png" alt="WhatsApp">
+                    <p>WhatsApp: 08212572341</p>
+                </div>
+                <div class="social-card">
+                    <img src="Pictures/facebook.png" alt="Facebook">
+                    <p>Facebook: @Kasi Flavour</p>
+                </div>
+                <div class="social-card">
+                    <img src="Pictures/insta.jpg" alt="Instagram">
+                    <p>Instagram: @Kasi Flavour</p>
+                </div>
+                <div class="social-card">
+                    <img src="Pictures/twitter.png" alt="Twitter">
+                    <p>Twitter: @Kasi Flavour</p>
+                </div>
+            </div>
+        </section>
+
+        <p>You can get us from | 7:00 AM to 10:00 PM (Monday to Thursday) | Friday and Saturday from 7:00 AM to 12:00 AM | Sunday from 8:00 AM to 5:00 PM</p>
+        <p>Address: The Greenacres Shopping Centre 3rd Entrance, Port Elizabeth, South Africa</p>
+        <p><strong>Payment Methods:</strong> Cash payments are accepted in person. We also support mobile transfers and bank EFT for faster order pickup. Please contact us directly on WhatsApp to confirm payment details.</p>
+
+        <section class="contact-tabs">
+            <div class="tab-list">
+                <button type="button" class="tab-button active" data-panel="panel-map">Location</button>
+                <button type="button" class="tab-button" data-panel="panel-form">Send Message</button>
+                <button type="button" class="tab-button" data-panel="panel-faq">FAQ</button>
+            </div>
+
+            <div id="panel-map" class="tab-panel active">
+                <div class="map-section">
+                    <h2>Visit Us</h2>
+                    <div id="map"></div>
+                </div>
+            </div>
+
+            <div id="panel-form" class="tab-panel">
+                <form id="contact-form" class="contact-form-section" action="#" method="post">
+                    <h2>Contact Form</h2>
+                    <div class="form-field">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="contact-name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="contact-email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-phone">Phone</label>
+                        <input type="tel" id="contact-phone" name="contact-phone" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="contact-subject" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-message-text">Message</label>
+                        <textarea id="contact-message-text" name="contact-message-text" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                    <div id="contact-feedback" class="form-feedback" aria-live="polite"></div>
+                </form>
+            </div>
+
+            <div id="panel-faq" class="tab-panel faq-section">
+                <h2>Frequently Asked Questions (FAQ)</h2>
+                <h3>What are your opening hours?</h3>
+                <p>We are open Monday to Thursday from 7:00 AM to 10:00 PM, Friday and Saturday from 7:00 AM to midnight, and Sunday from 8:00 AM to 5:00 PM.</p>
+                <h3>Do you offer delivery?</h3>
+                <p>Currently, we operate on a walk-in basis. However, you can contact us via WhatsApp or phone to inquire about special arrangements.</p>
+                <h3>What payment methods do you accept?</h3>
+                <p>We accept cash payments in person. We also support mobile payments and bank EFT when arranged ahead of time. Contact us on WhatsApp or phone to confirm the preferred payment option for your order.</p>
+                <h3>Can I place a bulk order for an event?</h3>
+                <p>Yes! We can accommodate bulk orders for events and gatherings. Please contact us via phone or email at least 24 hours in advance to discuss your requirements.</p>
+                <h3>Are there vegetarian options available?</h3>
+                <p>Yes, we offer vegetarian options such as Pap with Chakalaka and our Magwinya (Vetkoek). For more details, feel free to contact us.</p>
+                <h3>Where is your restaurant located?</h3>
+                <p>We are located at The Greenacres Shopping Centre, 3rd Entrance, Port Elizabeth, South Africa. You can view our location on Google Maps using the link in the navigation menu.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Kasi Flavour. Here to last. Everyone is welcomed with warm hands.</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
